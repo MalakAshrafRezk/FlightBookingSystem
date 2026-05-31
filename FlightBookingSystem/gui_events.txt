@@ -1,0 +1,7 @@
+2025-05-14 09:42:55 - Switched to screen: Login
+2025-05-14 09:43:05 - Login attempt for user: farah2
+2025-05-14 09:43:05 - Login successful for user: farah2 (null)
+2025-05-14 09:43:05 - Switched to screen: Customer
+2025-05-14 09:43:08 - Switched to screen: Search
+2025-05-14 09:44:00 - Switched to screen: Customer
+2025-05-14 09:44:01 - Switched to screen: Login

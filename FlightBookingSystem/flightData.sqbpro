@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path=":memory:" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1796"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="flight_booking" custom_title="0" dock_id="2" table="4,14:mainflight_booking"/><dock_state state="000000ff00000000fd00000001000000020000024900000213fc0100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000002490000012400ffffff000002490000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="flight_booking" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="288"/><column index="2" value="117"/><column index="3" value="70"/><column index="4" value="109"/><column index="5" value="109"/><column index="6" value="140"/><column index="7" value="109"/><column index="8" value="179"/><column index="9" value="241"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">-- جدول المستخدمين
+CREATE TABLE IF NOT EXISTS users (
+    userId TEXT PRIMARY KEY,
+    username TEXT NOT NULL,
+    password TEXT NOT NULL,
+    name TEXT,
+    email TEXT,
+    contactInfo TEXT,
+    role TEXT,
+    accessLevel INTEGER,
+    address TEXT,
+    preferences TEXT,
+    agency TEXT,
+    commission REAL,
+    department TEXT,
+    adminId TEXT,
+    securityLevel INTEGER
+);
+
+-- جدول الرحلات
+CREATE TABLE IF NOT EXISTS flights (
+    flightNumber TEXT PRIMARY KEY,
+    airline TEXT,
+    origin TEXT,
+    destination TEXT,
+    departureTime INTEGER,
+    arrivalTime INTEGER
+);
+
+-- جدول المقاعد داخل الرحلات
+CREATE TABLE IF NOT EXISTS seats (
+    flightNumber TEXT,
+    classType TEXT,
+    seatsAvailable INTEGER,
+    price REAL,
+    PRIMARY KEY (flightNumber, classType),
+    FOREIGN KEY (flightNumber) REFERENCES flights(flightNumber)
+);
+
+-- جدول الركاب
+CREATE TABLE IF NOT EXISTS passengers (
+    passengerId TEXT PRIMARY KEY,
+    name TEXT,
+    passportNumber TEXT,
+    dateOfBirth INTEGER,
+    specialRequests TEXT
+);
+
+-- جدول الحجوزات
+CREATE TABLE IF NOT EXISTS bookings (
+    bookingReference TEXT PRIMARY KEY,
+    customerId TEXT,
+    flightNumber TEXT,
+    status TEXT,
+    paymentStatus TEXT,
+    FOREIGN KEY (customerId) REFERENCES users(userId),
+    FOREIGN KEY (flightNumber) REFERENCES flights(flightNumber)
+);
+
+-- جدول الربط بين الحجوزات والركاب
+CREATE TABLE IF NOT EXISTS booking_passengers (
+    bookingReference TEXT,
+    passengerId TEXT,
+    PRIMARY KEY (bookingReference, passengerId),
+    FOREIGN KEY (bookingReference) REFERENCES bookings(bookingReference),
+    FOREIGN KEY (passengerId) REFERENCES passengers(passengerId)
+);
+
+-- جدول المدفوعات
+CREATE TABLE IF NOT EXISTS payments (
+    paymentId TEXT PRIMARY KEY,
+    bookingReference TEXT,
+    amount REAL,
+    methodType TEXT,
+    methodDetails TEXT,
+    status TEXT,
+    transactionDate INTEGER,
+    FOREIGN KEY (bookingReference) REFERENCES bookings(bookingReference)
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

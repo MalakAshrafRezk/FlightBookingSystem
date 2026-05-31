@@ -1,0 +1,11 @@
+Customer,C1,malak1,pass123,Malak Ashraf,malak1@mail.com,0101010101,sidibishr;1
+Customer,C2,farah2,pass456,Farah Hossam ,farah2@mail.com,0102020202,fdg;fasg
+Customer,C3,ahmed3,pass789,Ahmed Omar,ahmed3@mail.com,0103030303,dvsdg;kllfb
+Customer,C4,nour4,pass321,Nour Hesham,nour4@mail.com,0104040404,Zayed;
+Agent,A2,laila6,agent456,Laila Mona,laila6@mail.com,0106060606,CustomerCare;0.12
+Agent,A3,mohamed7,agent789,Mohamed Hany,mohamed7@mail.com,0107070707,VIP;0.2
+Administrator,AD1,admin1,adminpass1,Mariam Ehab,admin1@mail.com,0108080808,5;
+Administrator,AD3,admin3,adminpass3,Dina Sameh,admin3@mail.com,0110101010,9;
+Customer,22,22,222eee,dwd,wddw,dwdw,wddw;dwdw
+Administrator,111,wwww,1111eeee,wwwww,11111,weee,13;AdminID111
+Customer,111,llsdk,111kkkk,msdmv,ml;fds;,l;mf;lg,ml;mgl;;mlm;

@@ -1,0 +1,11 @@
+DomesticFlight,F100,EgyptAir,Cairo,Alexandria,1715335200000,1715342400000,Economy:50;Business:10,Economy:1000.0;Business:2500.0
+DomesticFlight,F101,EgyptAir,Cairo,Luxor,1715421600000,1715432400000,Economy:60;Business:15,Economy:1200.0;Business:2700.0
+DomesticFlight,F102,AirCairo,Luxor,Aswan,1715508000000,1715511600000,Economy:55;Business:8,Economy:800.0;Business:2000.0
+DomesticFlight,F103,EgyptAir,Cairo,Sharm,1715594400000,1715601600000,Economy:40;Business:10,Economy:1500.0;Business:3000.0
+DomesticFlight,F104,FlyEgypt,Alexandria,Cairo,1715680800000,1715688000000,Economy:50;Business:12,Economy:1000.0;Business:2500.0
+DomesticFlight,F105,AirCairo,Cairo,Hurghada,1715767200000,1715774400000,Economy:65;Business:10,Economy:900.0;Business:2200.0
+DomesticFlight,F106,EgyptAir,Luxor,Cairo,1715853600000,1715860800000,Economy:70;Business:20,Economy:1100.0;Business:2600.0
+DomesticFlight,F108,AirCairo,Cairo,Aswan,1716026400000,1716033600000,Economy:45;Business:10,Economy:1300.0;Business:2800.0
+DomesticFlight,F12,AirCairo,Alexandria,Aswan,1762852260000,1762942320000,Economy:50;Business:10,Economy:1000.0;Business:2500.0
+DomesticFlight,F1111,aaa,aaa,aaa,1762852271000,1762938671000,Economy:100,Economy:200.0
+DomesticFlight,F13333,d,d,e,1797070332000,1797156732000,Economy:100,Business:500.0
